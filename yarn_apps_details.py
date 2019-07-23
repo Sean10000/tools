@@ -2,8 +2,9 @@ import requests
 import json
 import sys
 # usage  : python3 yarn_apps_details.py hdp-003
+# 传入的参数为timeline v1/v1.5 server hostname或ip
 # purpose: 统计yarn 所有任务数在集群节点的分布情况
-# 如果hostname 为ip地址，会从/etc/hosts映射中根据ip替换为hostname，故需要在hdp上执行该脚本
+# 如果hostname 为ip地址，会从/etc/hosts映射中根据ip替换为hostname，故需要在hdp平台上执行该脚本
 # 最简单的统计方法是将app_list中的所有信息存入数据库中,即可做简单的平台分析
 
 def get_apps_hosts_distribution(apps_list):
